@@ -12,11 +12,14 @@ class PostImagesController < ApplicationController
   end
 
   def index
-    @post_images = PostImage.all
+    @post_images = PostImage.page(params[:page]).reverse_order
+      #1ページ分の決められた数のデータだけ新しい順に取得　※PostImage.all だと全てのデータ取得
+      #pageメソッドはkaminari専用メソッド
   end
 
   def show
     @post_image = PostImage.find(params[:id])
+    @post_comment = PostComment
   end
 
   def destroy
