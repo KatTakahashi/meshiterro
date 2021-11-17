@@ -8,5 +8,5 @@ Rails.application.routes.draw do
       #「いいね」の詳細ページは作成しないので、idの受け渡し不要。
     resources :post_comments, only: [:create, :destroy]
   end
-  resources :users, only: [:show]
+  resources :users, only: [:show, :edit, :update]
 end
