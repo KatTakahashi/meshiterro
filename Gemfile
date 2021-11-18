@@ -66,5 +66,12 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
+#ページング機能
 gem 'kaminari', '~> 1.2.1'
-  #ページング機能
+
+#レイアウトを整えるCSSフレームワーク
+gem 'bootstrap', '~> 4.5'
+#BootstrapはjQueryというライブラリに依存している。
+gem 'jquery-rails'
+#Meshiterroではfontawesomeを利用するため「font-awesome-sass」も導入。
+gem 'font-awesome-sass', '~> 5.13'
